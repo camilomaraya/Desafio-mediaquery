@@ -1,0 +1,231 @@
+        /* LAYOUT MOBILE */
+        /* FUENTES Y MARGENES TODA LA PAG */
+*{
+  font-family: Helvetica, sans-serif;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+
+.container {  
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: .3fr .4fr 1fr .4fr .4fr;
+    gap: 0;
+    grid-template-areas:
+      "navbar"
+      "orderby"
+      "grid"
+      "pages"
+      "footer";
+  }
+  
+.navbar { 
+  grid-area: navbar; 
+  background: blueviolet;
+  color: white;
+}
+
+/* INICIO CONFIG DEL NAVBAR */
+.alinear-nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.logocarshop{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 25px;
+}
+
+.logocarshop img{
+  max-width: 20%;
+  padding: 10%;
+  padding-right: 2%;
+}
+
+.iconburger{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.iconburger img{
+  max-width: 20%;
+  padding: 10%;
+ 
+}
+
+.desk{
+  display: none;
+}
+            /* FIN CONFIG DEL NAVBAR */
+            /* ------------------------------- */
+  
+.orderby { 
+  grid-area: orderby; 
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px solid gray;
+    background-color: rgb(215, 212, 212);
+}
+span{
+  font-size: 14px;
+}
+select{
+  background: transparent;
+  border: 1px solid salmon;
+  font-size: 12px;
+  height: 30px;
+  width: 75%;
+  border-radius: 2px;
+}
+        /* GRID PRODUCTOS */
+.grid { 
+  grid-area: grid; 
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  gap: 3%;
+  justify-items: center;
+  overflow-y: scroll;
+  max-height: 40vh;
+  
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border: 2px groove;
+  border-radius: 2%;
+
+}
+
+.card img{
+  max-width: 45%;
+}
+
+
+
+  
+        /* PAGINADOR */
+.pages { 
+  grid-area: pages; 
+
+}
+
+.pages ul{
+    list-style: none;
+    grid-area: cambiopag;
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+    padding: 50px;
+    justify-content: center;
+}
+
+.box a{
+    border: 1px solid white;
+    padding: 5px;
+    background-color: steelblue;
+    color: white;
+    text-decoration: none;
+}
+
+.footer { 
+  grid-area: footer; 
+  background-color: rgb(105, 23, 181);
+}
+.icon-footer img{
+  max-width: 4%;
+  padding: 5px;;
+}
+
+h5{
+  padding: 0;
+  margin: 3px;
+}
+
+@media (min-width:576px){
+  .container {  
+    display: grid;
+    grid-template-columns: 0.6fr 2fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    gap: 0;
+    grid-template-areas:
+      "navbar orderby"
+      "navbar grid"
+      "footer pages"
+      ;
+  }
+
+  .iconburger{
+    display: none;
+  }
+
+  .logocarshop{
+    font-size: 15px;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+
+  .desk{
+    padding: 2px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: flex-start;
+  }
+
+  .desk li{
+    padding: 5px;
+  }
+
+  .icon-footer img{
+    max-width: 30px;
+    padding: 5px;;
+  }
+
+  .orderby{
+    display: flex;
+    justify-content: center;
+  }
+
+  .grid{
+    max-height: 70vh;
+  }
+
+  .cars{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    overflow-y: scroll;
+    height: 100%;
+  }
+
+  .card img{
+    max-width: 100%;
+  }
+
+
+
+
+
+
+
+}
